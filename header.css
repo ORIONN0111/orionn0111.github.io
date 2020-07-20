@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* content: none; */
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
   }
   :root {
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
@@ -11,14 +14,22 @@
   a{
       text-decoration: none;
   }
+  main{
+    width: 100vw;
+  }
 header {
-  z-index: 9999;
+  z-index: 1000;
+  transform: none !important;
     padding: 10px;
-    background: white;
     position: fixed;
     justify-content: center;
-    width: 100%;
-    background-color: rgb(44, 110, 185);
+    width: 85px;
+    height: 85px;
+    background-color: #d1375e;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
   }
   
   #nav-drawer {
@@ -30,33 +41,50 @@ header {
   .nav-unshown {
     display: none;
   }
+  .eria{
+    position: absolute;
+    text-align: center;
+    background-color: rgb(2, 189, 148);
+    width: 84px;
+    height: 84px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  .eria:hover{
+    transform: scale(1.1);
+  }
   
   /*アイコンのスペース*/
   #nav-open {
-    display: inline-block;
-    width: 30px;
-    height: 22px;
-    vertical-align: mi;
+    position: absolute;
+    top: 16px;
+    left: 8px;
   }
+  /* input[type=checkbox] {
+    transform: scale(５);
+  } */
+
   
   /*ハンバーガーの形をCSSで表現*/
   #nav-open span,
   #nav-open span:before,
   #nav-open span:after {
     position: absolute;
-    height: 3px; /*線の太さ*/
-    width: 25px; /*長さ*/
-    border-radius: 3px;
+    height: 10px; /*線の太さ*/
+    width: 70px; /*長さ*/
+    border-radius: 5px;
     background: black;
     display: block;
     content: "";
     cursor: pointer;
   }
   #nav-open span:before {
-    bottom: -8px;
+    bottom: -20px;
   }
   #nav-open span:after {
-    bottom: -16px;
+    bottom: -40px;
   }
   
   /*閉じる用の薄黒箇所*/
@@ -68,7 +96,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
+    backdrop-filter: blur(100px);
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
@@ -81,7 +109,7 @@ header {
     left: 0;
     z-index: 9999;
     width: 90%;
-    max-width: 220px; /*最大幅（お好みで調整を）*/
+    max-width: 30vw; /*最大幅（お好みで調整を）*/
     height: 100%;
     background: white;
     transition: 0.3s ease-in-out;
@@ -101,30 +129,36 @@ header {
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
   }
   
-  .header-logo-menu {
+  /* .header-logo-menu {
     display: flex;
-    display: -moz-flex;
-    display: -o-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    flex-direction: row;
-    -moz-flex-direction: row;
-    -o-flex-direction: row;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
+    height: 8vh;
+    width: 4vw;
   }
-  
+   */
   /*ロゴやサイトタイトルをセンタリング*/
-  .logo-area {
+  /* .logo-area {
     text-align: center;
     margin: auto;
-  }
+  } */
   /* メニューの仕様など */
   
+  .menu{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    height: 100vh;;
+  }
   .menu p {
+    margin: 30px;
+    display: flex;
     font-weight: bold;
     color: black;
     position: relative;
+    justify-self: space-between;
   }
   .menu a {
     display: inline-block;
@@ -149,22 +183,15 @@ header {
 
   .menu a:link, a:visited,a:active {
     color:#000;text-decoration:none;
+    font-size: 80px;
   }
-  
-  .menu a:hover {
-    color: tomato;
+.home a:hover{
+  color: skyblue;
 }
-/*カーソルがあった時*/
-.information a:hover {
-    color: rgba(0, 160, 61, 0.65);
+.profile a:hover{
+  color: tomato;
 }
-.economy a:hover{
-    color: rgba(255, 171, 0, 0.63);
-}
-.engineering a:hover{
-    color: rgba(0, 147, 219, 0.61);
-}
-.graduate a:hover{
+.works a:hover{
     color: rgba(0, 98, 188, 0.65);
 }
 
@@ -175,12 +202,11 @@ header {
     -webkit-transform : translateY(-50%);
     transform : translateY(-50%);
 }
-footer{
-    width: 100%;
-    background-color: #89c7de;
-    color: #fff;
-    padding: 30px 0;
-
-    /* position: absolute; */
-    bottom: 0; /*下に固定*/
+.naw{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 130px;
+  font-size: 2rem;
+  left: 0px;
 }

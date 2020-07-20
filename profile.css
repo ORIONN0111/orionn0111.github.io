@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+main{
+    width: 100vw;
+    height: 100vh;
+}
+.proField{
+    z-index: -1;
+    width: 90vw;
+    height: 90vh;
+    border: solid;
+    position: relative;
+    top: 5%;
+    left: 7%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20,1fr);
+    grid-gap: 1%;
+    grid-auto-rows: minmax(100px, auto);
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+}
+.proT{
+    animation: proT 1.0s ease 0.0s 1 forwards;
+    transform: translate(100vw,-50vh);
+}
+.proR{
+    animation: proR 1.0s ease 0.0s 1 forwards;
+    transform: rotate(90deg);
+}
+@keyframes proR{
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes proT{
+    100%{
+        transform:translate(0px,5vh);
+    }
+}
+
+
+.fadeoutT{
+    animation: proOutT 0.5s ease 0.0s 1 forwards;
+}
+@keyframes proOutT{
+    100%{
+        transform:translate(100vw,-50vh);
+    }
+    0%{
+        transform:translate(0px,5vh);
+    }
+}
+.fadeoutR{
+    animation: proOutR 0.5s ease 0.0s 1 forwards;
+}
+@keyframes proOutR{
+    100%{
+        transform:rotate(90deg);
+    }
+    0%{
+        transform:rotate(0deg);
+    }
+}
+
+
+.lineRe{
+    background-repeat: space;
+    background: url(img/caffe2.svg);
+    background-size: 10% 100%;
+    opacity: 0.3;
+    z-index: -3;
+}
+.cafeOne{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 4; 
+    grid-row-end: 5;
+}
+.cafeTwo{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 7; 
+    grid-row-end: 8;
+}
+.cafeThree{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 10; 
+    grid-row-end: 11;
+}
+.cafeFour{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 13; 
+    grid-row-end: 14;
+}
+.cafeFive{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 16; 
+    grid-row-end: 17;
+}
+.cafeSix{
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 19; 
+    grid-row-end: 20;
+}
+.I-myface{
+    grid-column-start: 3; 
+    grid-column-end: 7; 
+    grid-row-start: 4; 
+    grid-row-end: 10;
+}
+.myface{
+    display: inline-block;
+    border: solid;
+    width: 100%;
+    height: auto;
+    padding-left: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: aqua;
+    padding: 10px;
+}
+.myName{
+    grid-column-start: 3; 
+    grid-column-end: 7; 
+    grid-row-start: 10; 
+    grid-row-end:12;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Monoton', cursive;
+}
+.myProInfo{
+    grid-column-start: 2; 
+    grid-column-end: 8; 
+    grid-row-start: 12; 
+    grid-row-end: 20;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid yellowgreen;
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+th{
+    white-space: nowrap;
+    font-size: 24px;
+    text-align: right;
+}
+th::after{
+    content: "：";
+}
+td{
+    font-size: 20px;
+    text-align: left;
+    white-space: nowrap;
+}
+.mySkill{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 8; 
+    grid-column-end: 21; 
+    grid-row-start: 1; 
+    grid-row-end: 21;
+    /* background-color: rebeccapurple; */
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20,1fr);
+    grid-gap: 5%;
+    grid-auto-rows: minmax(100px, auto);
+}
+.html{
+    background-color: #FFD740;
+    grid-column-start: 4; 
+    grid-column-end: 10; 
+    grid-row-start: 4; 
+    grid-row-end: 11;
+}
+.c{
+    background-color: #EF5350;
+    grid-column-start: 11; 
+    grid-column-end: 17; 
+    grid-row-start: 4; 
+    grid-row-end: 11;
+}
+.python{
+    background-color: #FFAB91;
+    grid-column-start: 2; 
+    grid-column-end: 8; 
+    grid-row-start: 12; 
+    grid-row-end: 19;
+}
+.go{
+    background-color: #a0f357;
+    grid-column-start: 8; 
+    grid-column-end: 14; 
+    grid-row-start: 12; 
+    grid-row-end: 19;
+}
+.java{
+    background-color: #29B6F6;
+    grid-column-start: 14; 
+    grid-column-end: 20; 
+    grid-row-start: 12; 
+    grid-row-end: 19;
+}
+.mySkill img{
+    width: 100%;
+    height: 80%;
+}
+.skill{
+    border-radius: 10px;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    padding: 3px;
+}
+.lineOne{
+    z-index: -1;
+    background-color: #29B6F6;
+    grid-column-start: 1; 
+    grid-column-end: 9; 
+    grid-row-start: 1; 
+    grid-row-end: 20;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: -5vh;
+    opacity: 0.5;
+}
+.lineTwo{
+    z-index: -1;
+    background-color: rgba(46, 95, 255, 0.5);
+    grid-column-start: 1; 
+    grid-column-end: 21; 
+    grid-row-start: 2; 
+    grid-row-end: 4;
+}
+.cardName{
+    font-size: 3vw;
+    grid-column-start: 1; 
+    grid-column-end: 9; 
+    grid-row-start: 2; 
+    grid-row-end: 4;
+}
+
+
