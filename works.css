@@ -48,6 +48,7 @@ section{
   position: absolute;
   height: 7vh;
   top: 1vh;
+  background-color: orange;
   opacity: 0.3;
   z-index: 9999;
 }
@@ -56,7 +57,6 @@ section{
   top: 8vh;
   left: 7vw;
   background-color: aqua;
-  z-index: 3;
 }
 .webErea{
   width: 7vw;
@@ -78,7 +78,6 @@ section{
   top: 7vh;
   left: 8vw;
   background-color: rebeccapurple;
-  z-index: 2;
 }
 .desingErea{
   width: 11vw;
@@ -100,7 +99,6 @@ section{
   top: 6vh;
   left: 9vw;
   background-color: green;
-  z-index: 1;
 }
 .moderingErea{
   width: 13vw;

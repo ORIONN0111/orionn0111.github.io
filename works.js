@@ -19,37 +19,41 @@ $(function () {
 		return false;
 	});
 });
+
 let webE = document.getElementById("wedE");
 let desingE = document.getElementById("desingE");
 let moderingE = document.getElementById("moderingE");
 let web = document.getElementById("wed");
 let desing = document.getElementById("desing");
 let modering = document.getElementById("modering");
+web.style.zIndex = "3";
+desing.style.zIndex = "2";
+modering.style.zIndex = "1";
 
 webE.addEventListener('click', event => {
 	web.classList.add('change');
 	setTimeout(function () {
-		if (web.style.zIndex == 1) {
-			web.style.zIndex = 3;
-			if (desing.style.zIndex = 2) {
-				desing.style.zIndex = 1;
-				modering.style.zIndex = 2;
-			} else if (modering.style.zIndex = 2) {
-				modering.style.zIndex = 1;
-				desing.style.zIndex = 2;
+		if (web.style.zIndex == "1") {
+			web.style.zIndex = "3";
+			if (desing.style.zIndex = "2") {
+				desing.style.zIndex = "1";
+				modering.style.zIndex = "2";
+			} else if (modering.style.zIndex = "2") {
+				modering.style.zIndex = "1";
+				desing.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (web.style.zIndex == 2) {
-			web.style.zIndex = 3;
-			if (desing.style.zIndex = 3) {
-				desing.style.zIndex = 2;
-			} else if (modering.style.zIndex = 3) {
-				modering.style.zIndex = 2;
+		} else if (web.style.zIndex == "2") {
+			web.style.zIndex = "3";
+			if (desing.style.zIndex = "3") {
+				desing.style.zIndex = "2";
+			} else if (modering.style.zIndex = "3") {
+				modering.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (web.style.zIndex = 3) {
+		} else if (web.style.zIndex = "3") {
 			return
 		} else {
 			console.log(err3);
@@ -65,27 +69,27 @@ webE.addEventListener('click', event => {
 desingE.addEventListener('click', event => {
 	desing.classList.add('change');
 	setTimeout(function () {
-		if (desing.style.zIndex == 1) {
-			desing.style.zIndex = 3;
-			if (web.style.zIndex = 2) {
-				web.style.zIndex = 1;
-				modering.style.zIndex = 2;
-			} else if (modering.style.zIndex = 2) {
-				modering.style.zIndex = 1;
-				web.style.zIndex = 2;
+		if (desing.style.zIndex == "1") {
+			desing.style.zIndex = "3";
+			if (web.style.zIndex = "2") {
+				web.style.zIndex = "1";
+				modering.style.zIndex = "2";
+			} else if (modering.style.zIndex = "2") {
+				modering.style.zIndex = "1";
+				web.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (desing.style.zIndex == 2) {
-			desing.style.zIndex = 3;
-			if (web.style.zIndex = 3) {
-				web.style.zIndex = 2;
-			} else if (modering.style.zIndex = 3) {
-				modering.style.zIndex = 2;
+		} else if (desing.style.zIndex == "2") {
+			desing.style.zIndex = "3";
+			if (web.style.zIndex = "3") {
+				web.style.zIndex = "2";
+			} else if (modering.style.zIndex = "3") {
+				modering.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (desing.style.zIndex = 3) {
+		} else if (desing.style.zIndex = "3") {
 			return
 		} else {
 			console.log(err3);
@@ -101,27 +105,27 @@ desingE.addEventListener('click', event => {
 moderingE.addEventListener('click', event => {
 	modering.classList.add('change');
 	setTimeout(function () {
-		if (modering.style.zIndex == 1) {
-			modering.style.zIndex = 3;
-			if (web.style.zIndex = 2) {
-				web.style.zIndex = 1;
-				desing.style.zIndex = 2;
-			} else if (desing.style.zIndex = 2) {
-				desing.style.zIndex = 1;
-				web.style.zIndex = 2;
+		if (modering.style.zIndex == "1") {
+			modering.style.zIndex = "3";
+			if (web.style.zIndex = "2") {
+				web.style.zIndex = "1";
+				desing.style.zIndex = "2";
+			} else if (desing.style.zIndex = "2") {
+				desing.style.zIndex = "1";
+				web.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (modering.style.zIndex == 2) {
-			modering.style.zIndex = 3;
-			if (desing.style.zIndex = 3) {
-				desing.style.zIndex = 2;
-			} else if (web.style.zIndex = 3) {
-				web.style.zIndex = 2;
+		} else if (modering.style.zIndex == "2") {
+			modering.style.zIndex = "3";
+			if (desing.style.zIndex = "3") {
+				desing.style.zIndex = "2";
+			} else if (web.style.zIndex = "3") {
+				web.style.zIndex = "2";
 			} else {
 				console.log(err2)
 			}
-		} else if (modering.style.zIndex = 3) {
+		} else if (modering.style.zIndex = "3") {
 			return
 		} else {
 			console.log(err3);
