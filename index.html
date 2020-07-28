@@ -4,8 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="window.css">
+  <link rel="shortcut icon" href="img/hiyoko.svg">
+  <script src="index.js" defer></script>
+  <script src="header.js" defer></script>
   <title>ORIONN_PROFILE</title>
 </head>
 
@@ -18,9 +23,12 @@
     <label class="nav-unshown" id="nav-close" for="nav-input"></label>
     <div id="nav-content" class="menuAll">
       <div class="menu">
+        <p class="home nowpage">
+          <a href="index.html">HOME</a>
+        </p>
         <p class="profile">
           <a href="profile.html">Profile</a>
-        </p>
+      </p>
         <p class="works">
           <a href="works.html">Works</a>
         </p>
@@ -29,17 +37,47 @@
         <li class="meal"><a href="mailto:x19012xx@aitech.ac.jp"><i class="far fa-envelope"></i></a></li>
         <li class="twitter"><a href="https://twitter.com/konkorenn/"><i class="fab fa-twitter"></i></a></li>
         <li class="facebook"><a href="https://www.facebook.com/aikoudai"><i class="fab fa-facebook"></i></a></li>
-        <li class="youtube"><a href="https://www.youtube.com/channel/UCez_BkLQSD3ai5gX6n4nZcQ"><iclass="fab fa-youtube"></i></a></li>
+        <li class="youtube"><a href="https://www.youtube.com/channel/UCez_BkLQSD3ai5gX6n4nZcQ"><i
+              class="fab fa-youtube"></i></a></li>
       </ul>
     </div>
-  </div>
-</header>
-<div class="naw">
-  <p>HOME</p>
-</div>
-  <main>
-    <section class="first">
-    </section>
+    </div>
+    <div class="naw">
+      <p>HOME</p>
+    </div>
+  </header>
+  <main class="ov-h">
+    <div class="screen">
+      <section class="room" id="room">
+        <div class="window ov-v">
+          <div class="door dleft ov-v" id="dleft"></div>
+          <div class="door dright ov-v" id="dright"></div>
+        </div>
+
+        <div class="win-erea ov-h">
+          <div class="orionn" id="orionn">
+            <img src="img/orionn.svg" class="orionnImg">
+          </div>
+          <div class="moon" id="moon">
+            <img src="img/ira.svg">
+          </div>
+        </div>
+
+        <div class="book">
+          <img src="img/books.svg" class="book-c" id="book">
+        </div>
+        <div class="syokubutu">
+        <div class="saboten">
+          <img src="img/SS.svg"class="saboten-c" id="kusaA">
+        </div>
+        <div class="kusa">
+          <img src="img/SSS.svg"class="kusa-c" id="kusaB">
+        </div>
+          <img src="img/" alt="">
+        </div>
+        </div>
+      </section>
+    </div>
   </main>
 
 

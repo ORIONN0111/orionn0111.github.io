@@ -34,67 +34,73 @@ webE.addEventListener('click', event => {
 	web.classList.add('change');
 	setTimeout(function () {
 		if (web.style.zIndex == "1") {
-			web.style.zIndex = "3";
-			if (desing.style.zIndex = "2") {
-				desing.style.zIndex = "1";
-				modering.style.zIndex = "2";
-			} else if (modering.style.zIndex = "2") {
-				modering.style.zIndex = "1";
+			if (desing.style.zIndex == "3") {
+				web.style.zIndex = "3";
 				desing.style.zIndex = "2";
+				modering.style.zIndex = "1";
+				console.log("S");
+			} else if (modering.style.zIndex == "3") {
+				web.style.zIndex = "3";
+				modering.style.zIndex = "2";
+				desing.style.zIndex = "1";
 			} else {
 				console.log(err2)
 			}
 		} else if (web.style.zIndex == "2") {
-			web.style.zIndex = "3";
-			if (desing.style.zIndex = "3") {
+			if (desing.style.zIndex == "3") {
+				web.style.zIndex = "3";
 				desing.style.zIndex = "2";
-			} else if (modering.style.zIndex = "3") {
+				modering.style.zIndex = "1";
+			} else if (modering.style.zIndex == "3") {
+				web.style.zIndex = "3";
 				modering.style.zIndex = "2";
+				desing.style.zIndex = "1";
 			} else {
-				console.log(err2)
+				console.log(err2);
 			}
-		} else if (web.style.zIndex = "3") {
+		} else if (web.style.zIndex == "3") {
 			return
 		} else {
 			console.log(err3);
 		}
-	}, 150);
+	}, 200);
 	setTimeout(function () {
 		web.classList.remove('change');
 	}, 1200);
-	console.log("mo" + modering.style.zIndex);
-	console.log("de" + desing.style.zIndex);
-	console.log("we" + web.style.zIndex);
 });
 desingE.addEventListener('click', event => {
 	desing.classList.add('change');
 	setTimeout(function () {
 		if (desing.style.zIndex == "1") {
-			desing.style.zIndex = "3";
-			if (web.style.zIndex = "2") {
-				web.style.zIndex = "1";
-				modering.style.zIndex = "2";
-			} else if (modering.style.zIndex = "2") {
-				modering.style.zIndex = "1";
+			if (web.style.zIndex == "3") {
+				desing.style.zIndex = "3";
 				web.style.zIndex = "2";
+				modering.style.zIndex = "1";
+			} else if (modering.style.zIndex == "3") {
+				desing.style.zIndex = "3";
+				modering.style.zIndex = "2";
+				web.style.zIndex = "1";
 			} else {
-				console.log(err2)
+				console.log(err2);
 			}
 		} else if (desing.style.zIndex == "2") {
-			desing.style.zIndex = "3";
-			if (web.style.zIndex = "3") {
+			if (web.style.zIndex == "3") {
+				desing.style.zIndex = "3";
 				web.style.zIndex = "2";
-			} else if (modering.style.zIndex = "3") {
+				modering.style.zIndex="1"
+			} else if (modering.style.zIndex == "3") {
+				desing.style.zIndex = "3";
 				modering.style.zIndex = "2";
+				web.style.zIndex ="1"
 			} else {
 				console.log(err2)
 			}
-		} else if (desing.style.zIndex = "3") {
+		} else if (desing.style.zIndex == "3") {
 			return
 		} else {
 			console.log(err3);
 		}
-	}, 150);
+	}, 200);
 	setTimeout(function () {
 		desing.classList.remove('change');
 	}, 1200);
@@ -106,31 +112,35 @@ moderingE.addEventListener('click', event => {
 	modering.classList.add('change');
 	setTimeout(function () {
 		if (modering.style.zIndex == "1") {
-			modering.style.zIndex = "3";
-			if (web.style.zIndex = "2") {
-				web.style.zIndex = "1";
-				desing.style.zIndex = "2";
-			} else if (desing.style.zIndex = "2") {
-				desing.style.zIndex = "1";
+			if (web.style.zIndex == "3") {
+				modering.style.zIndex = "3";
 				web.style.zIndex = "2";
+				desing.style.zIndex = "1";
+			} else if (desing.style.zIndex == "3") {
+				modering.style.zIndex = "3";
+				desing.style.zIndex = "2";
+				web.style.zIndex = "1";
 			} else {
 				console.log(err2)
 			}
 		} else if (modering.style.zIndex == "2") {
-			modering.style.zIndex = "3";
-			if (desing.style.zIndex = "3") {
+			if (desing.style.zIndex == "3") {
+				modering.style.zIndex = "3";
 				desing.style.zIndex = "2";
-			} else if (web.style.zIndex = "3") {
+				web.style.zIndex ="1"
+			} else if (web.style.zIndex == "3") {
+				modering.style.zIndex = "3";
 				web.style.zIndex = "2";
+				desing.style.zIndex ="1"
 			} else {
 				console.log(err2)
 			}
-		} else if (modering.style.zIndex = "3") {
+		} else if (modering.style.zIndex == "3") {
 			return
 		} else {
 			console.log(err3);
 		}
-	}, 150);
+	}, 200);
 	setTimeout(function () {
 		modering.classList.remove('change');
 	}, 1200);

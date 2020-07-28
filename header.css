@@ -25,7 +25,7 @@ header {
     justify-content: center;
     width: 85px;
     height: 85px;
-    background-color: #d1375e;
+    background-color: #DDDD00;
     border-radius: 3px;
     position: absolute;
     top: 5px;
@@ -100,6 +100,9 @@ header {
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
+  .endScEf{
+    animation: endSc 0.5s ease 0.0s 1 forwards;
+  }
   
   /*メニューの中身*/
   #nav-content {
@@ -128,19 +131,28 @@ header {
     transform: translateX(0%);
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
   }
-  
-  /* .header-logo-menu {
-    display: flex;
-    height: 8vh;
-    width: 4vw;
+  .endEf{
+    animation: END 0.5s ease 0.0s 1 forwards;
   }
-   */
-  /*ロゴやサイトタイトルをセンタリング*/
-  /* .logo-area {
-    text-align: center;
-    margin: auto;
-  } */
-  /* メニューの仕様など */
+  @keyframes END{
+    100%{
+      transform: translateX(-105%);
+    }
+    30%{
+      transform: translateX(1%);
+    }
+    0%{
+      transform: translateX(0%);
+    }
+  }
+  @keyframes endSc{
+    100%{
+      opacity: 0;
+    }
+    0%{
+      opacity: 0.5;
+    }
+  }
   
   .menu{
     display:-webkit-box;
@@ -185,14 +197,29 @@ header {
     color:#000;text-decoration:none;
     font-size: 80px;
   }
+a{
+  transition: 0.3s ;
+}
 .home a:hover{
-  color: skyblue;
+  color: #112288;
 }
 .profile a:hover{
-  color: tomato;
+  color: #550000;
 }
 .works a:hover{
-    color: rgba(0, 98, 188, 0.65);
+  color: #003300;
+}
+.nowpage a{
+  color: tomato;
+}
+.nowpage a::after{
+  color: tomato;
+  content: "now page";
+  font-size: large;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
 }
 
 .menuAll{
@@ -209,4 +236,55 @@ header {
   top: 130px;
   font-size: 2rem;
   left: 0px;
+}
+@media screen and (max-width:497px){
+  .naw{
+    display: none;
+  }
+  .eria{
+    position: absolute;
+    text-align: center;
+    background-color: rgb(2, 189, 148);
+    width: 84px;
+    height: 84px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    transform: rotate(90deg);
+  }
+  .menu > p{
+    transform: translate(0px,-100px) rotate(90deg);
+    font-size: 5px;
+  }
+  .menu a:link, a:visited,a:active {
+    color:#000;text-decoration:none;
+    font-size: 50px;
+  }
+  .menu{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-gap: 1%;
+    text-align: left;
+  }
+  .home{
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 3; 
+    grid-row-end: 5;
+  }
+  .profile{
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 6; 
+    grid-row-end: 8;
+  }
+  .works{
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 9; 
+    grid-row-end: 11;
+  }
 }

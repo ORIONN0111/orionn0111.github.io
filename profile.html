@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="header.css">
+  <script src="header.js" defer></script>
   <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="windowK.css">
+  <link rel="shortcut icon" href="img/hiyoko.svg">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
   <title>profile</title>
 </head>
@@ -19,30 +22,47 @@
     <label class="nav-unshown" id="nav-close" for="nav-input"></label>
     <div id="nav-content" class="menuAll">
       <div class="menu">
-        <p class="index">
+        <p class="home">
           <a href="index.html">HOME</a>
         </p>
+        <p class="profile nowpage">
+          <a href="profile.html">Profile</a>
+      </p>
         <p class="works">
           <a href="works.html">Works</a>
         </p>
       </div>
       <ul class="social">
         <li class="meal"><a href="mailto:x19012xx@aitech.ac.jp"><i class="far fa-envelope"></i></a></li>
-        <li class="twitter"><a href="https://twitter.com/konkorenn/"><i class="fab fa-twitter"></i></a></li>
-        <li class="facebook"><a href="https://www.facebook.com/aikoudai"><i class="fab fa-facebook"></i></a></li>
-        <li class="youtube"><a href="https://www.youtube.com/channel/UCez_BkLQSD3ai5gX6n4nZcQ"><i
-              class="fab fa-youtube"></i></a></li>
       </ul>
     </div>
     </div>
-  </header>
-  <main>
     <div class="naw">
       <p>PROFILE</p>
     </div>
-    <div class="proT" id="fadeoutT">
+  </header>
+  <main>
+    <div class="screen">
+      <section class="room" id="room">
+        <div class="window ov-v">
+          <div class="door dleft ov-v"></div>
+          <div class="door dright ov-v"></div>
+        </div>
+
+        <div class="win-erea ov-h">
+          <div class="orionn">
+            <img src="img/orionn.svg" class="orionnImg">
+          </div>
+          <div class="moon">
+            <div class="moomlight"></div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <div class="profileMain proT" id="fadeoutT">
     <div class="proField proR" id="fadeoutR">
-      <div class="cardName"><p>Student ID Card</p></div>
+      <div class="cardName"><h1>PROFILE CARD</h1></div>
       <div class="lineRe cafeOne"></div>
       <div class="lineRe cafeTwo"></div>
       <div class="lineRe cafeThree"></div>
@@ -91,20 +111,13 @@
           </tr>
 
         </table>
-        <!-- <ul>
-                        <li>趣味：人型３Dモデル作成</li>
-                        <li>好きな言語：お疲れ様でした！</li>
-                        <li>座右の銘：日進月歩</li>
-                        <li>好きな作家：土橋真二郎</li>
-                        <li>好きな作曲家：麻枝准</li>
-                    </ul> -->
       </div>
       <div class="mySkill">
-        <div class="html skill"><img src="img/html-5.svg" alt=""> html/css</div>
-        <div class="c skill"><img src="img/cL.svg" alt=""> C</div>
-        <div class="python skill"><img src="img/python.svg" alt=""> python</div>
-        <div class="go skill"><img src="img/go.svg" alt=""> Go</div>
-        <div class="java skill"><img src="img/java.svg" alt=""> Java</div>
+        <div class="html skill"><img src="img/html-5.svg" alt=""><p> html/css</p></div>
+        <div class="c skill"><img src="img/cL.svg" alt=""><p> C</p></div>
+        <div class="python skill"><img src="img/python.svg" alt=""><p> python</p></div>
+        <div class="go skill"><img src="img/go.svg" alt=""><p> Go</p></div>
+        <div class="java skill"><img src="img/java.svg" alt=""><p> Java</p></div>
       </div>
     </div>
     </div>
