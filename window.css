@@ -1,0 +1,323 @@
+.screen{
+    display: inline-block;
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.room{
+    z-index: -1000;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("img/壁.svg");
+    background-size: 100vw;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-gap: 0;
+    animation: ROOMIN 1.2s ease 0.4s 1 forwards;
+}
+@keyframes ROOMIN{
+    100%{
+      transform: scale(1.2);
+    }
+    0%{
+      transform:scale(1.0);
+    }
+}
+.roomout{
+    animation: ROOMOUT 1.0s ease 0.0s 1 forwards;
+}
+@keyframes ROOMOUT{
+    100%{
+      transform:scale(1.0);
+    }
+    0%{
+      transform: scale(1.2);
+    }
+}
+.ov-h{
+    overflow: hidden;
+}
+.ov-v{
+    opacity: visible;
+}
+.window{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 50, 1), rgba(100, 100, 255, 1));
+    border-radius: 20px;
+    grid-column-start: 3; 
+    grid-column-end: 9; 
+    grid-row-start: 2; 
+    grid-row-end: 8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap: 0;
+    z-index: -100;
+}
+.door{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: solid saddlebrown 10px;
+    background-color: rgba(137, 189, 222, 0.5);
+    z-index: -10;
+}
+.dleft{
+    top: 0;
+    left: 0;
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 1; 
+    grid-row-end: 2;
+    animation: LEFTDOOR 1.2s ease 0.5s 1 forwards;
+    transform-origin: center left;
+}
+.dright{
+    top: 0;
+    right: 0;
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 1; 
+    grid-row-end: 2;
+    animation: RIGHTDOOR 1.2s ease 0.5s 1 forwards;
+    transform-origin: center right;
+}
+@keyframes RIGHTDOOR{
+    100%{
+      transform:rotateY(120deg);
+    }
+    0%{
+      transform:rotateY(0deg);
+    }
+}
+.doorRightOut{
+    animation: RIGHTDOOROUT 0.7s ease 0.0s 1 forwards;
+}
+@keyframes RIGHTDOOROUT{
+    0%{
+      transform:rotateY(120deg);
+    }
+    15%{
+      transform:rotateY(120deg);
+    }
+    100%{
+      transform:rotateY(0deg);
+    }
+}
+@keyframes LEFTDOOR{
+    100%{
+      transform:rotateY(-120deg);
+    }
+    0%{
+      transform:rotateY(0deg);
+    }
+}
+.doorLeftOut{
+    animation: LEFTDOOROUT 0.7s ease 0.0s 1 forwards;
+}
+@keyframes LEFTDOOROUT{
+    0%{
+      transform:rotateY(-120deg);
+    }
+    15%{
+      transform:rotateY(-120deg);
+    }
+    100%{
+      transform:rotateY(0deg);
+    }
+}
+.win-erea{
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+    grid-column-start: 3; 
+    grid-column-end: 9; 
+    grid-row-start: 2; 
+    grid-row-end: 8;
+    z-index: -90;
+    overflow: hidden;
+    border-radius: 20px;
+    border: solid saddlebrown 12px;
+}
+.orionn{
+    width: 300px;
+    height: auto;
+    z-index: -80;
+    animation: ORIONN 1.7s ease 0.5s 1 forwards;
+    transform: translate(-30vw,-30vh);
+}
+@keyframes ORIONN{
+    100%{
+      transform: translate(10vw,10vh) rotate(30deg);
+    }
+    0%{
+      transform: translate(-30vw,-30vh) rotate(0deg);
+    }
+}
+.orionnout{
+    animation: ORIONNOUT 0.2s ease 0.0s 1 forwards;
+}
+@keyframes ORIONNOUT{
+    0%{
+      transform: translate(10vw,10vh) rotate(30deg);
+    }
+    100%{
+      transform: translate(-30vw,-30vh) rotate(0deg);
+    }
+}
+.moon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(80vw,40vh);
+    animation: MOON 1.7s ease 0.5s 1 forwards;
+    z-index: -90;
+}
+
+@keyframes MOON{
+    100%{
+      transform: translate(45vw,0vh) rotate(10deg);
+    }
+    0%{
+      transform: translate(80vw,40vh) rotate(0deg);
+    }
+}
+.moonout{
+    animation: MOONOUT 0.2s ease 0.0s 1 forwards;
+}
+@keyframes MOONOUT{
+    0%{
+      transform: translate(45vw,0vh) rotate(10deg);
+    }
+    100%{
+      transform: translate(80vw,40vh) rotate(0deg);
+    }
+}
+
+/* ここから始めよう */
+
+
+.syokubutu{
+  animation: SYOKUBUTU 1.0s ease 1.7s 1 forwards;
+}
+@keyframes SYOKUBUTU{
+  100%{
+    transform: translate(0,90vh);
+  }
+  0%{
+    transform: translate(0,200vh);
+  }
+}
+
+
+.saboten{
+  width: 10vw;
+  height: 20vh;
+  position: absolute;
+  left: 30vw;
+  bottom: 30vh;
+}
+@keyframes KUSA{
+  100%{
+    transform: rotateX(0deg)
+  }
+  90%{
+    transform: rotateX(-10deg)
+  }
+  70%{
+    transform: rotateX(20deg)
+  }
+  50%{
+    transform: rotateX(-30deg)
+  }
+  0%{
+    transform: rotateX(90deg)
+  }
+}
+.saboten-c{
+  width: 10vw;
+  height: auto;
+  animation: KUSA 1.0s ease 2.7s 1 forwards;
+  transform-origin: left bottom;
+  transform: rotateY(90deg)
+}
+.kusa{
+  width: 10vw;
+  height: 20vh;
+  position: absolute;
+  left: 50vw;
+  bottom: 30vh;
+}
+.kusa-c{
+  width: 10vw;
+  height: auto;
+  animation: KUSA 1.0s ease 3.0s 1 forwards;
+  transform-origin: left bottom;
+  transform: rotateY(90deg)
+}
+.kusaOut1{
+  animation: KUSAOUTA 0.6s ease 0.0s 1 forwards;
+  transform-origin: left bottom;
+}
+.kusaOut2{
+  animation: KUSAOUTB 0.7s ease 0.0s 1 forwards;
+  transform-origin: left bottom;
+}
+@keyframes KUSAOUTA{
+  100%{
+    transform: rotateX(90deg)
+  }
+  60%{
+    transform: rotateX(90deg)
+  }
+  40%{
+    transform: rotateX(0deg)
+  }
+  0%{
+    transform: rotateX(0deg)
+  }
+}
+@keyframes KUSAOUTB{
+  100%{
+    transform: rotateX(90deg)
+  }
+  60%{
+    transform: rotateX(90deg)
+  }
+  30%{
+    transform: rotateX(0deg)
+  }
+  0%{
+    transform: rotateX(0deg)
+  }
+}
+@keyframes BOOKOUT{
+  100%{
+    transform: rotateX(90deg)
+  }
+  80%{
+    transform: rotateX(0deg)
+  }
+  0%{
+    transform: rotateX(0deg)
+  }
+}
+.bookOut{
+  animation: KUSAOUTB 1.0s ease 0.0s 1 forwards;
+  transform-origin: left bottom;
+}
+.book{
+  position: absolute;
+  left: 18vw;
+  bottom: -55vh;
+  z-index: 0;
+  animation: KUSA 0.7s ease 2.0s 1 forwards;
+  transform-origin: left bottom;
+  transform: rotateX(90deg)
+}
+.book-c{
+  width: 60vw;
+}
