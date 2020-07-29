@@ -23,7 +23,7 @@ $(function () {
             kusaB.classList.add('kusaOut1');
             book.classList.add('bookOut')
             setTimeout(function () {
-                window.location = url;  // 1.5秒後に取得したURLに遷移
+                window.location = url;  // 1.0秒後に取得したURLに遷移
             }, 1000);
         }
         return false;

@@ -4,6 +4,13 @@
     height: 90vh;
     overflow: hidden;
 }
+.ov-h{
+    overflow: hidden;
+}
+.ov-v{
+    opacity: visible;
+}
+/* 部屋の設定 */
 .room{
     position: absolute;
     z-index: -1000;
@@ -16,13 +23,9 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10,1fr);
     grid-gap: 0;
+    filter: blur(10px);
 }
-.ov-h{
-    overflow: hidden;
-}
-.ov-v{
-    opacity: visible;
-}
+/* 窓の設定 */
 .window{
     height: 100%;
     width: 100%;
@@ -38,6 +41,7 @@
     grid-gap: 0;
     z-index: -100;
 }
+/* 扉の設定 */
 .door{
     height: 100%;
     width: 100%;
@@ -65,7 +69,6 @@
 .win-erea{
     width: 100%;
     height: 100%;
-    /* background-color: green; */
     grid-column-start: 3; 
     grid-column-end: 9; 
     grid-row-start: 2; 
@@ -74,25 +77,4 @@
     overflow: hidden;
     border-radius: 20px;
     border: solid saddlebrown 12px;
-}
-.orionn{
-    width: 300px;
-    height: auto;
-    z-index: -80;
-    transform: translate(-30vw,-30vh) rotate(0deg);
-}
-.moon{
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: #DDDD00;
-    transform: translate(80vw,40vh);
-    transform: translate(80vw,40vh) rotate(0deg);
-    z-index: -90;
-}
-.moomlight{
-    width: 80px;
-    height: 80px;
-    background-color: #1d2081;
-    border-radius: 50%;
 }

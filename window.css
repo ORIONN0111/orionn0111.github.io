@@ -1,9 +1,17 @@
+/* 初期設定 */
 .screen{
     display: inline-block;
     max-width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
+.ov-h{
+  overflow: hidden;
+}
+.ov-v{
+  opacity: visible;
+}
+/* 部屋の設定 */
 .room{
     z-index: -1000;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
@@ -16,32 +24,34 @@
     grid-template-rows: repeat(10,1fr);
     grid-gap: 0;
     animation: ROOMIN 1.2s ease 0.4s 1 forwards;
+    filter: blur(10px);
 }
+/* ページに入るアニメーション */
 @keyframes ROOMIN{
     100%{
       transform: scale(1.2);
+      filter: blur(0px);
     }
     0%{
       transform:scale(1.0);
+      filter: blur(10px);
     }
 }
+/* ページから出るアニメーション */
 .roomout{
     animation: ROOMOUT 1.0s ease 0.0s 1 forwards;
 }
 @keyframes ROOMOUT{
     100%{
       transform:scale(1.0);
+      filter: blur(10px);
     }
     0%{
       transform: scale(1.2);
+      filter: blur(0px);
     }
 }
-.ov-h{
-    overflow: hidden;
-}
-.ov-v{
-    opacity: visible;
-}
+/* 窓の設定 */
 .window{
     height: 100%;
     width: 100%;
@@ -57,6 +67,7 @@
     grid-gap: 0;
     z-index: -100;
 }
+/* ドアの設定 */
 .door{
     height: 100%;
     width: 100%;
@@ -129,10 +140,10 @@
       transform:rotateY(0deg);
     }
 }
+/* 窓の中身の設定 */
 .win-erea{
     width: 100%;
     height: 100%;
-    /* background-color: green; */
     grid-column-start: 3; 
     grid-column-end: 9; 
     grid-row-start: 2; 
@@ -197,9 +208,7 @@
     }
 }
 
-/* ここから始めよう */
-
-
+/* 下の小物の設定 */
 .syokubutu{
   animation: SYOKUBUTU 1.0s ease 1.7s 1 forwards;
 }
@@ -311,13 +320,13 @@
 }
 .book{
   position: absolute;
-  left: 18vw;
-  bottom: -55vh;
+  left: 25vw;
+  top: 71vh;
   z-index: 0;
   animation: KUSA 0.7s ease 2.0s 1 forwards;
   transform-origin: left bottom;
   transform: rotateX(90deg)
 }
 .book-c{
-  width: 60vw;
+  width: 45vw;
 }

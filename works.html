@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,117 +10,176 @@
     <link rel="shortcut icon" href="img/hiyoko.svg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        type="text/javascript"></script>
     <script src="works.js" defer></script>
     <script src="header.js" defer></script>
     <link rel="stylesheet" href="header.css">
 </head>
+
 <body>
     <header>
         <input id="nav-input" type="checkbox" class="nav-unshown" />
         <label class="eria" for="nav-input">
-          <label id="nav-open" for="nav-input"><span></span></label>
+            <label id="nav-open" for="nav-input"><span></span></label>
         </label>
         <label class="nav-unshown" id="nav-close" for="nav-input"></label>
         <div id="nav-content" class="menuAll">
-          <div class="menu">
-            <p class="home">
-              <a href="index.html">HOME</a>
-            </p>
-            <p class="profile">
-                <a href="profile.html">Profile</a>
-            </p>
-            <p class="works nowpage">
-                <a href="works.html">Works</a>
-              </p>
-          </div>
-          <ul class="social">
-            <li class="meal"><a href="mailto:x19012xx@aitech.ac.jp"><i class="far fa-envelope"></i></a></li>
-            <li class="twitter"><a href="https://twitter.com/konkorenn/"><i class="fab fa-twitter"></i></a></li>
-            <li class="facebook"><a href="https://www.facebook.com/aikoudai"><i class="fab fa-facebook"></i></a></li>
-            <li class="youtube"><a href="https://www.youtube.com/channel/UCez_BkLQSD3ai5gX6n4nZcQ"><i
-                  class="fab fa-youtube"></i></a></li>
-          </ul>
+            <div class="menu">
+                <p class="home">
+                    <a href="index.html">HOME</a>
+                </p>
+                <p class="profile">
+                    <a href="profile.html">Profile</a>
+                </p>
+                <p class="works nowpage">
+                    <a href="works.html">Works</a>
+                </p>
+            </div>
+            <ul class="social">
+                <li class="meal"><a href="mailto:x19012xx@aitech.ac.jp"><i class="far fa-envelope"></i></a></li>
+                <li class="twitter"><a href="https://twitter.com/konkorenn/"><i class="fab fa-twitter"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/aikoudai"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCez_BkLQSD3ai5gX6n4nZcQ"><i
+                            class="fab fa-youtube"></i></a></li>
+            </ul>
         </div>
-      </div>
-      <div class="naw">
-        <p>WORKS</p>
-      </div>
-  </header>
+        </div>
+    </header>
     <main>
         <div class="screen">
             <section class="room" id="room">
-              <div class="window ov-v">
-                <div class="door dleft ov-v"></div>
-                <div class="door dright ov-v"></div>
-              </div>
-      
-              <div class="win-erea ov-h">
-                <div class="orionn">
-                  <img src="img/orionn.svg" class="orionnImg">
+                <div class="window ov-v">
+                    <div class="door dleft ov-v"></div>
+                    <div class="door dright ov-v"></div>
                 </div>
-                <div class="moon">
-                  <div class="moomlight"></div>
-                </div>
-              </div>
-      
-            </section>
-          </div>
-        <div class="allWorks">
-        <div id="fade" class="fadein">
-        <!-- <div class="webErea erea" id="wedE"></div>
-        <div class="desingErea erea" id="desingE"></div>
-        <div class="moderingErea erea" id=moderingE></div> -->
-        <section class="web worksPage " id=wed>
-            <div class="webName title webErea" id="wedE"><h3>WEB</h3></div>
-            <!-- <div class="one work">
-                <h3>Web</h3>
-                <div class="Iimg">
-                    <a href="img/VOC.jpg" data-lightbox="group"
-                    title="<h1>バーチャルオープンキャンパス</h1><p>現在製作中<p>"
-                    >
-                        <img src="img/VOC.jpg" class="img"width="300">
-                    </a>
-                </div>
-            </div> -->
-        </section>
 
-        <section class="desing worksPage" id="desing">
-            <div class="desingName title desingErea" id="desingE"><h3>デザイン<h3></div>
-            <!-- <div class="three work">
-                <h3>デザイン</h3>
-                <div class="Iimg">
-                    <a href="img/hiyoko.jpg" data-lightbox="group"
-                    title="<h1>ひよこアイコン</h1>
-                    <p>制作時間：10m<br>
-                    制作機材：イラストレータ<br>
-                    感想：SNSなどで使う自分のトレードマークとして作成<p>"
-                        >
-                        <img src="img/hiyoko.jpg" class="img"width="300">
-                    </a>
-                </div>
-            </div> -->
-        </section>
-        <section class="modering worksPage" id="modering">
-            <div class="moderingName title moderingErea" id=moderingE><h3>モデリング<h3></div>
-            <!-- <div class="two work">
-                <h3>モデリング</h3>
-                <div class="Iimg">
-                    <a href="img/robo.jpg" data-lightbox="group"
-                    title="<h1>多脚機械</h1>
-                    <p>制作時間：5h<br>
-                    制作機材：MAYA<br>
-                    感想：多脚物体アニメーションは動くところが多いのがやりがい<p>"
-                        >
-                        <img src="img/robo.jpg" class="img"width="300">
-                    </a>
-                </div>
-            </div> -->
-        </section>
+            </section>
         </div>
+        <div class="allWorks">
+            <div id="fade" class="fadein">
+
+                <section class="web worksPage" id=web>
+                    <div class="webName title webErea" id="webE">
+                        <h3>WEB</h3>
+                    </div>
+                    <div class="one work">
+                        <div class="Iimg">
+                            <img src="img/w-VOC.jpg" class="img">
+                        </div>
+                        <div class="left">
+                            <h3>バーチャル・オープンキャンパス</h3>
+                            <p>現在製作中</p>
+                        </div>
+                    </div>
+                    <div class="two work">
+                        <div class="right">
+                            <h3>linimo料金比較サイト</h3>
+                            <p>技術：html,css,javascript <br>
+                                コロナで登校回数が減ったため<br>
+                                各種設定を行うと定期と通常料金の<br>
+                                比較ができるサイトを作りました</p>
+                        </div>
+                        <div class="Iimg">
+                            <img src="img/w-linimo.png" class="img">
+                        </div>
+                    </div>
+                    <div class="three work">
+                        <div class="Iimg">
+                            <img src="img/w-mysite.png" class="img">
+                        </div>
+                        <div class="left">
+                            <h3>ポートフォリオ</h3>
+                            <p>技術：html,css,javascript <br>
+                                自分の家のようなサイトにしたいと思い<br>
+                                周りにあるものをベースに作りました<br>
+                                スクロールが嫌いなので除外しました</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="design worksPage" id="design">
+                    <div class="designName title designErea" id="designE">
+                        <h3>デザイン<h3>
+                    </div>
+                    <div class="one work">
+                        <div class="Iimg">
+                            <img src="img/d-habe.png" class="img" width="300">
+                        </div>
+                        <div class="left">
+                            <h3>高級壁紙</h3>
+                            <p>制作時間：1h 制作ソフト:Illustrator <br>
+                                茶色をベースカラー、黄色をアクセントカラーとした<br>
+                                ２色の色で高級感を出そうとしました</p>
+                        </div>
+                    </div>
+                    <div class="two work">
+                        <div class="right">
+                            <h3>ひよこ</h3>
+                            <p>制作時間：10m 制作ソフト:Illustrator <br>
+                                大学のリモートアイコン、ポートフォリオの画像など<br>
+                                自分を示すアイコンのようなものが欲しくて作りました</p>
+                        </div>
+                        <div class="Iimg">
+                            <img src="img/d-hiyoko.jpg" class="img" width="300">
+                        </div>
+                    </div>
+                    <div class="three work">
+                        <div class="Iimg">
+                            <img src="img/d-hiyoko.png" class="img" width="300">
+                        </div>
+                        <div class="left">
+                            <h3>3Dひよこ</h3>
+                            <p>制作時間：20m 制作機材：スカルプテゥルス <br>
+                                ひよこへの愛が深まりいつの間にか３Dになってました<br>
+                                愛は次元を上昇させるんですね！</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="modering worksPage" id="modering">
+                    <div class="moderingName title moderingErea" id=moderingE>
+                        <h3>モデリング<h3>
+                    </div>
+                    <div class="one work">
+                        <div class="Iimg">
+                            <img src="img/m-fish.png" class="img" width="300">
+                        </div>
+                        <div class="left">
+                            <h3>魚アニメーション</h3>
+                            <p>制作時間：5h 制作機材：MAYA <br>
+                                魚が泳ぐアニメーションです<br>
+                                美味しい魚しか登場しません！</p>
+                        </div>
+                    </div>
+                    <div class="two work">
+                        <div class="right">
+                            <h3>多脚機械アニメーション</h3>
+                            <p>制作時間：1h 制作ソフト:MAYA <br>
+                                たくさんの足が動くアニメーションです<br>
+                                関節が多いものが動くものは好き…</p>
+                        </div>
+                        <div class="Iimg">
+                            <img src="img/m-robo.jpg" class="img" width="300">
+                        </div>
+                    </div>
+                    <div class="three work">
+                        <div class="Iimg">
+                            <img src="img/m-tatemono.png" class="img" width="300">
+                        </div>
+                        <div class="left">
+                            <h3>体育館</h3>
+                            <p>制作時間：1h 制作機材：MAYA <br>
+                                学校の体育館を作りました<br>
+                                バーチャルオープンキャンパスの素材に使いました</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
 
     </main>
-    
+
 </body>
+
 </html>

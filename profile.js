@@ -10,7 +10,7 @@ $(function () {
             objT.classList.add('fadeoutT');
             objR.classList.add('fadeoutR');
             setTimeout(function () {
-                window.location = url;  // 1.5秒後に取得したURLに遷移
+                window.location = url;  // 0.5秒後に取得したURLに遷移
             }, 500);
         }
         return false;
