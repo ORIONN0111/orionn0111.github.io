@@ -180,6 +180,7 @@ section {
   height: 99%;
   overflow: hidden;
 }
+/* 重いので動画はないよ */
 .Iimg video{
   height: 100%;
   width: auto;
