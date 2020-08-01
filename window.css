@@ -209,7 +209,7 @@
 }
 
 /* 下の小物の設定 */
-.syokubutu{
+/* .syokubutu{
   animation: SYOKUBUTU 1.0s ease 1.7s 1 forwards;
 }
 @keyframes SYOKUBUTU{
@@ -219,15 +219,15 @@
   0%{
     transform: translate(0,200vh);
   }
-}
+} */
 
 
 .saboten{
   width: 10vw;
   height: 20vh;
   position: absolute;
-  left: 30vw;
-  bottom: 30vh;
+  left: 5vw;
+  top: -20vh;
 }
 @keyframes KUSA{
   100%{
@@ -247,8 +247,8 @@
   }
 }
 .saboten-c{
-  width: 10vw;
-  height: auto;
+  height: 25vh;
+  width: auto;
   animation: KUSA 1.0s ease 2.7s 1 forwards;
   transform-origin: left bottom;
   transform: rotateY(90deg)
@@ -257,12 +257,12 @@
   width: 10vw;
   height: 20vh;
   position: absolute;
-  left: 50vw;
-  bottom: 30vh;
+  left: 25vw;
+  top: -20vh;
 }
 .kusa-c{
-  width: 10vw;
-  height: auto;
+  height: 25vh;
+  width: auto;
   animation: KUSA 1.0s ease 3.0s 1 forwards;
   transform-origin: left bottom;
   transform: rotateY(90deg)

@@ -1,23 +1,23 @@
 
-let obj = document.getElementById("fade");
+var obj = document.getElementById("fade");
 window.onload = function () {
 	setTimeout(function () {
 		obj.classList.remove('fadein');
 	}, 600);
 }
 $(function () {
-	// ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-	$('a:not([href^="#"]):not([target])').on('click', function (e) {
-		e.preventDefault(); // ナビゲートをキャンセル
-		url = $(this).attr('href'); // 遷移先のURLを取得
-		if (url !== '') {
-			obj.classList.add('fadeout');
-			setTimeout(function () {
-				window.location = url;  // 1.5秒後に取得したURLに遷移
-			}, 500);
-		}
-		return false;
-	});
+    // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+    $('a:not([href^="#"]):not([target])').on('click', function (e) {
+        e.preventDefault(); // ナビゲートをキャンセル
+        url = $(this).attr('href'); // 遷移先のURLを取得
+        if (url !== '') {
+            obj.classList.add('fadeout');
+            setTimeout(function () {
+                window.location = url;  // 0.5秒後に取得したURLに遷移
+            }, 500);
+        }
+        return false;
+    });
 });
 
 let webE = document.getElementById("webE");
@@ -38,7 +38,6 @@ webE.addEventListener('click', event => {
 				web.style.zIndex = "3";
 				design.style.zIndex = "2";
 				modering.style.zIndex = "1";
-				console.log("S");
 			} else if (modering.style.zIndex == "3") {
 				web.style.zIndex = "3";
 				modering.style.zIndex = "2";
