@@ -163,9 +163,11 @@
 @keyframes ORIONN{
     100%{
       transform: translate(10vw,10vh) rotate(30deg);
+      opacity: 1;
     }
     0%{
       transform: translate(-30vw,-30vh) rotate(0deg);
+      opacity: 0;
     }
 }
 .orionnout{
@@ -174,9 +176,11 @@
 @keyframes ORIONNOUT{
     0%{
       transform: translate(10vw,10vh) rotate(30deg);
+      opacity: 1;
     }
     100%{
       transform: translate(-30vw,-30vh) rotate(0deg);
+      opacity: 0;
     }
 }
 .moon{
@@ -329,4 +333,67 @@
 }
 .book-c{
   width: 45vw;
+}
+@media screen and (max-width:497px){
+  .book{
+    position: absolute;
+    left: 0vw;
+    top: 71vh;
+    z-index: 0;
+    animation: KUSA 0.7s ease 2.0s 1 forwards;
+    transform-origin: left bottom;
+    transform: rotateX(90deg)
+  }
+  .book-c{
+    width: 400px;
+  }
+  .saboten{
+    width: 10vw;
+    height: 20vh;
+    position: absolute;
+    left: 5vw;
+    top: -22vh;
+  }
+  .kusa{
+    width: 10vw;
+    height: 20vh;
+    position: absolute;
+    left: 60vw;
+    top: -21vh;
+  }
+  .orionn{
+    width: 100px;
+    height: auto;
+    z-index: -80;
+    animation: ORIONN 1.7s ease 0.5s 1 forwards;
+    transform: translate(-30vw,-30vh);
+  }
+  .moon{
+    border-radius: 50%;
+    width: 80px;
+    height: auto;
+    transform: translate(80vw,40vh);
+    animation: MOON 1.7s ease 0.5s 1 forwards;
+    z-index: -90;
+  }
+  @keyframes MOON{
+    100%{
+      transform: translate(30vw,20vh) rotate(10deg);
+      opacity: 1;
+    }
+    0%{
+      transform: translate(80vw,40vh) rotate(0deg);
+      opacity: 0;
+    }
+  }
+  @keyframes MOONOUT{
+    0%{
+      transform: translate(30vw,20vh) rotate(10deg);
+      opacity: 1;
+    }
+    100%{
+      transform: translate(80vw,40vh) rotate(0deg);
+      opacity: 0;
+    }
+  }
 }
